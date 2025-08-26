@@ -1,5 +1,3 @@
-// src/sections/CtaFinal.jsx
-
 import { FadeIn } from "../components/motion/fade-in";
 import { CardSpotlight } from "../components/magic-ui/card-spotlight";
 import { Button } from "../components/ui/button";
@@ -15,7 +13,6 @@ export function CtaFinal() {
       />
       <div className="relative mx-auto max-w-7xl px-4">
         <CardSpotlight className="w-full">
-          {/* Também ajustei o padding para ser um pouco menor em ecrãs pequenos (p-6) */}
           <div className="relative overflow-hidden rounded-2xl border border-line/40 bg-[linear-gradient(180deg,rgba(8,38,51,0.85),rgba(7,24,34,0.9))] p-6 shadow-2xl ring-1 ring-white/5 md:p-12">
             <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-[radial-gradient(closest-side,rgba(102,224,219,0.14),transparent)] blur-2xl" />
             <div className="pointer-events-none absolute -left-24 -bottom-24 h-72 w-72 rounded-full bg-[radial-gradient(closest-side,rgba(227,199,160,0.14),transparent)] blur-2xl" />

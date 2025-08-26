@@ -1,5 +1,3 @@
-// src/sections/FaqAcido.jsx
-
 import React from "react";
 import { FadeIn } from "../components/motion/fade-in";
 import { Badge } from "../components/ui/badge";
@@ -9,7 +7,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "../components/ui/accordion";
-import { Particles } from "../components/magic-ui/particles"; // 1. Importe as partículas
+import { Particles } from "../components/magic-ui/particles";
 
 const FAQ_ITEMS = [
   {
@@ -36,17 +34,14 @@ const FAQ_ITEMS = [
 
 export function FaqAcido() {
   return (
-    // 2. Adicione 'relative' e 'overflow-hidden'
     <section id="faq" className="relative overflow-hidden bg-bg py-16 md:py-24">
-      
-      {/* 3. Adicione o componente de partículas ao fundo */}
+
       <Particles
         className="absolute inset-0"
         quantity={75}
         color="#C9D2DF"
       />
 
-      {/* 4. Adicione 'relative' para que o conteúdo fique por cima */}
       <div className="relative mx-auto max-w-4xl px-4">
         <FadeIn className="text-center mb-12">
           <Badge>Dúvidas Comuns</Badge>

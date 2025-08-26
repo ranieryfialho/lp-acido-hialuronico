@@ -1,5 +1,3 @@
-// src/sections/Especialista.jsx
-
 import { FadeIn } from "../components/motion/fade-in";
 import { CardSpotlight } from "../components/magic-ui/card-spotlight";
 import { Badge } from "../components/ui/badge";
@@ -10,7 +8,6 @@ const MEDICO_ALT = "Dr. Felipe Brasil — Ortopedista especialista em joelho";
 
 export function Especialista() {
   return (
-    // A ÚNICA ALTERAÇÃO ESTÁ AQUI: adicionamos a cor de fundo 'bg-bg2/50'
     <section id="especialista" className="relative bg-bg2/50">
       <div
         className="
@@ -18,7 +15,6 @@ export function Especialista() {
           md:py-20 md:pb-32 lg:grid-cols-[1.05fr_1fr] lg:gap-12
         "
       >
-        {/* ESQUERDA — Foto do médico (sem alteração) */}
         <FadeIn>
           <CardSpotlight className="h-full w-full">
             <figure className="relative overflow-hidden rounded-2xl border border-line/40 bg-bg/60 shadow-lg ring-1 ring-white/5">
@@ -41,7 +37,6 @@ export function Especialista() {
           </CardSpotlight>
         </FadeIn>
 
-        {/* DIREITA — Título + copy + CTA (sem alteração de conteúdo) */}
         <div className="text-center md:text-left">
           <FadeIn>
             <div className="max-w-3xl mx-auto md:mx-0">

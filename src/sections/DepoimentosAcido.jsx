@@ -1,12 +1,9 @@
-// src/sections/DepoimentosAcido.jsx
-
 import { FadeIn } from "../components/motion/fade-in";
 import { CardSpotlight } from "../components/magic-ui/card-spotlight";
 import { Badge } from "../components/ui/badge";
 import { Star, Quote } from "lucide-react";
 
 // --- CONTEÚDO DE EXEMPLO ---
-// Quando receber os depoimentos, basta editar este array.
 const DEPOIMENTOS_EXEMPLO = [
   {
     id: "t1",
@@ -28,7 +25,6 @@ const DEPOIMENTOS_EXEMPLO = [
   },
 ];
 
-// Componente para as estrelas de avaliação
 function RatingStars({ value = 5 }) {
   return (
     <div className="flex items-center gap-0.5" aria-label={`${value} de 5 estrelas`}>
@@ -44,7 +40,6 @@ function RatingStars({ value = 5 }) {
   );
 }
 
-// Componente para o card de depoimento (estrutura corrigida)
 function DepoimentoCard({ item }) {
   const iniciais = item.nome.split(" ").map((n) => n[0]).slice(0, 2).join("");
 

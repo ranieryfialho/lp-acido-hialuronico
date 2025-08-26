@@ -1,5 +1,3 @@
-// src/sections/Localizacao.jsx
-
 import { FadeIn } from "../components/motion/fade-in";
 import { Badge } from "../components/ui/badge";
 import { Button } from "../components/ui/button";
@@ -12,7 +10,6 @@ const GMAPS_EMBED_URL = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3
 
 export function Localizacao() {
   return (
-    // MUDANÇA: Removi as classes 'border-t' e 'border-line/30' daqui
     <section id="localizacao" className="relative bg-bg">
       <div className="relative overflow-hidden">
         <Particles

@@ -1,5 +1,3 @@
-// src/sections/BeneficiosAcido.jsx
-
 import { FadeIn } from "../components/motion/fade-in";
 import { CardSpotlight } from "../components/magic-ui/card-spotlight";
 import { BadgeCheck } from "lucide-react";
@@ -68,9 +66,7 @@ export function BeneficiosAcido() {
           </p>
         </FadeIn>
 
-        {/* Layout customizado: 3 cards em cima, 2 embaixo */}
         <div className="space-y-6">
-          {/* Primeira linha - 3 cards */}
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {listaBeneficios.slice(0, 3).map((beneficio, index) => (
               <FadeIn key={beneficio.title} delay={index * 0.05}>
@@ -80,8 +76,7 @@ export function BeneficiosAcido() {
               </FadeIn>
             ))}
           </div>
-          
-          {/* Segunda linha - 2 cards centralizados */}
+
           <div className="flex flex-col md:flex-row gap-6 justify-center max-w-4xl mx-auto">
             {listaBeneficios.slice(3, 5).map((beneficio, index) => (
               <FadeIn key={beneficio.title} delay={(index + 3) * 0.05}>
