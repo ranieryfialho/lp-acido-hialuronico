@@ -45,7 +45,7 @@ export function Indicacoes() {
                 title="Para quem tem dor intensa e precisa de conforto rápido"
                 treatment="Bloqueio de Nervos Geniculares"
             >
-              Perfeito para quem não pode esperar e precisa de alívio rápido para iniciar a reabilitação. Usado em conjunto com o Ácido Hialurônico, forma a "dobradinha campeã".
+             Trata-se de uma opção especialmente indicada para pacientes que necessitam de alívio imediato da dor, possibilitando o início precoce da reabilitação. Quando associado ao ácido hialurônico, constitui uma abordagem terapêutica complementar altamente eficaz.
             </IndicacaoCard>
           </FadeIn>
           <FadeIn delay={0.3}>

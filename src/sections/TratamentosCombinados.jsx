@@ -59,7 +59,7 @@ export function TratamentosCombinados() {
                 </div>
                 <h3 className="font-title text-xl">Tratamentos Ortobiológicos</h3>
                 <p className="mt-2 mx-auto max-w-2xl text-sm text-muted">
-                    Em breve, teremos disponíveis tratamentos regenerativos como BMA (células-tronco) e PRP (plasma rico em plaquetas), que poderão ser associados para potencializar ainda mais a recuperação da articulação.
+                    Atualmente, já temos disponíveis tratamentos regenerativos, como o BMA (células-tronco), que podem ser associados para potencializar ainda mais a recuperação da articulação.
                 </p>
             </CardSpotlight>
         </FadeIn>
