@@ -3,31 +3,50 @@ import { CardSpotlight } from "../components/magic-ui/card-spotlight";
 import { Badge } from "../components/ui/badge";
 import { Star, Quote } from "lucide-react";
 
-// --- CONTEÚDO DE EXEMPLO ---
 const DEPOIMENTOS_EXEMPLO = [
   {
     id: "t1",
-    nome: "Maria S.",
-    texto: "Estava com muito receio, mas o alívio que senti depois da aplicação foi incrível. Voltei a caminhar no parque sem dor, algo que não fazia há anos. Recomendo demais!",
+    nome: "Maria Adriana Hilario Freitas",
+    texto:
+      "Cheguei ao Dr. Felipe com muitas dores nos joelhos pois tenho artrose, fiz a aplicação de ácido hialurônico e tive uma grande melhora. Voltei a ter qualidade de vida.",
     rating: 5,
   },
   {
     id: "t2",
-    nome: "João P.",
-    texto: "O procedimento foi super rápido e indolor. Em poucos dias, já senti meu joelho menos rígido e com mais mobilidade. Agradeço ao Dr. Felipe pelo excelente atendimento.",
+    nome: "Francisca Teixeira",
+    texto:
+      "Ótimo atendimento, fiz aplicação de ácido hialurônico e bloqueio de nervo fiquei sem dor nenhuma. Não troco por nada esse médico. Deus abençoe.",
     rating: 5,
   },
   {
     id: "t3",
-    nome: "Ana L.",
-    texto: "Depois de tentar várias fisioterapias sem sucesso, a aplicação de ácido hialurônico foi a solução que eu precisava. Minha qualidade de vida melhorou 100%.",
+    nome: "Hellany Kelly",
+    texto:
+      "Levei minha mãe para ser consultada pelo Dr Felipe Brasil, pois ela sentia fortes dores no joelho e andava caxingando. Durante toda a consulta o Dr. ouviu atentamente tudo o que minha mãe estava sentindo, avaliou sua caminhada e passou ultrassom para identificar o problema dela. Na mesma consulta já foi iniciado o tratamento com punção do excesso de líquido no joelho, aplicação de ácido hialurônico e fisioterapia. Toda a equipe nos recebeu bem e foram muito prestativos em sanar nossas dúvidas.",
+    rating: 5,
+  },
+  {
+    id: "t4",
+    nome: "Amilton Santos",
+    texto:
+      "Gostei muito do atendimento, fiz os procedimentos de infiltração com ácido hialurônico e bloqueio perimeniscal, senti alívio imediato, equipe e atendimento excelente!!! 👍😊",
+    rating: 5,
+  },
+  {
+    id: "t5",
+    nome: "Lucia Lobo",
+    texto:
+      "Vim de Itatira/Ce, estava com muitas dores em meu joelho direito. Dr Felipe realizou um tratamento excelente, que é o bloqueio da dor com ácido hialurônico. Estou muito bem e se Deus quiser semana que vem será o outro joelho. Excelente atendimento de sua equipe. 💜🙏",
     rating: 5,
   },
 ];
 
 function RatingStars({ value = 5 }) {
   return (
-    <div className="flex items-center gap-0.5" aria-label={`${value} de 5 estrelas`}>
+    <div
+      className="flex items-center gap-0.5"
+      aria-label={`${value} de 5 estrelas`}
+    >
       {Array.from({ length: 5 }).map((_, i) => (
         <Star
           key={i}
@@ -41,7 +60,11 @@ function RatingStars({ value = 5 }) {
 }
 
 function DepoimentoCard({ item }) {
-  const iniciais = item.nome.split(" ").map((n) => n[0]).slice(0, 2).join("");
+  const iniciais = item.nome
+    .split(" ")
+    .map((n) => n[0])
+    .slice(0, 2)
+    .join("");
 
   return (
     <CardSpotlight className="h-full w-full">
@@ -76,12 +99,27 @@ export function DepoimentosAcido() {
           </h2>
         </FadeIn>
 
-        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {DEPOIMENTOS_EXEMPLO.map((depoimento, index) => (
-            <FadeIn key={depoimento.id} delay={index * 0.1}>
-              <DepoimentoCard item={depoimento} />
-            </FadeIn>
-          ))}
+        {/* Layout customizado: 3 depoimentos em cima, 2 embaixo */}
+        <div className="mt-12 space-y-6">
+          {/* Primeira linha - 3 depoimentos */}
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {DEPOIMENTOS_EXEMPLO.slice(0, 3).map((depoimento, index) => (
+              <FadeIn key={depoimento.id} delay={index * 0.1}>
+                <DepoimentoCard item={depoimento} />
+              </FadeIn>
+            ))}
+          </div>
+
+          {/* Segunda linha - 2 depoimentos centralizados */}
+          <div className="flex flex-col md:flex-row gap-6 justify-center max-w-4xl mx-auto">
+            {DEPOIMENTOS_EXEMPLO.slice(3, 5).map((depoimento, index) => (
+              <FadeIn key={depoimento.id} delay={(index + 3) * 0.1}>
+                <div className="w-full md:w-80 lg:w-96">
+                  <DepoimentoCard item={depoimento} />
+                </div>
+              </FadeIn>
+            ))}
+          </div>
         </div>
       </div>
     </section>
