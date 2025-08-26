@@ -2,7 +2,7 @@ import { FadeIn } from "../components/motion/fade-in";
 import { Button } from "../components/ui/button";
 import { CheckCircle2 } from "lucide-react";
 
-const imagemProcedimento = `${import.meta.env.BASE_URL}images/tratamentos/acido-hialuronico-procedimento.jpg`;
+const imagemProcedimento = `${import.meta.env.BASE_URL}images/tratamentos/acido-hialuronico-procedimento.jpeg`;
 
 function BeneficioItem({ children }) {
     return (
