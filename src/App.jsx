@@ -19,8 +19,8 @@ export default function App() {
       <main>
         <HeroAcido />
         <Sintomas />
-        <Viscossuplementacao />
         <TratamentosCombinados />
+        <Viscossuplementacao />
         <Indicacoes />
         <BeneficiosAcido />
         <Especialista />
