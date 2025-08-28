@@ -99,9 +99,7 @@ export function DepoimentosAcido() {
           </h2>
         </FadeIn>
 
-        {/* Layout customizado: 3 depoimentos em cima, 2 embaixo */}
         <div className="mt-12 space-y-6">
-          {/* Primeira linha - 3 depoimentos */}
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {DEPOIMENTOS_EXEMPLO.slice(0, 3).map((depoimento, index) => (
               <FadeIn key={depoimento.id} delay={index * 0.1}>
@@ -110,7 +108,6 @@ export function DepoimentosAcido() {
             ))}
           </div>
 
-          {/* Segunda linha - 2 depoimentos centralizados */}
           <div className="flex flex-col md:flex-row gap-6 justify-center max-w-4xl mx-auto">
             {DEPOIMENTOS_EXEMPLO.slice(3, 5).map((depoimento, index) => (
               <FadeIn key={depoimento.id} delay={(index + 3) * 0.1}>
